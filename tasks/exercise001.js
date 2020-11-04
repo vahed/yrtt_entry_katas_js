@@ -10,9 +10,9 @@ function singles(arr){
     // Your code here!
     if (arr === undefined) throw new Error("array is required");
 
-    const object = {};
-    const result = [];
-    const value = null;
+    let object = {};
+    let result = [];
+    let value = null;
     let total = 0;
 
     arr.forEach(item => {
@@ -21,7 +21,7 @@ function singles(arr){
         object[item] += 1;
     })
 
-    for (const prop in object) {
+    for (let prop in object) {
         if(object[prop] < 2) {
             result.push(prop);
         }
