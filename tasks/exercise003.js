@@ -23,6 +23,21 @@
 
 function rowWeights(array){
     // Your code here!
+    let finalArr = [];
+    let count1 = 0;
+    let count2 = 0;
+
+    for(let i=0; i < array.length; i++){
+        if((i+2)%2 == 0) {
+            count1 += array[i];
+        }
+        else {
+            count2 += array[i];
+        }
+    }
+    finalArr.push(count1);
+    finalArr.push(count2);
+    return finalArr;
 }
 
 module.exports = {

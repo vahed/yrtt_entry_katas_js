@@ -8,6 +8,30 @@
 function singles(arr){
     if (arr === undefined) throw new Error("array is required");
     // Your code here!
+    if (arr === undefined) throw new Error("array is required");
+
+    const object = {};
+    const result = [];
+    const value = null;
+    let total = 0;
+
+    arr.forEach(item => {
+        if(!object[item])
+            object[item] = 0;
+        object[item] += 1;
+    })
+
+    for (const prop in object) {
+        if(object[prop] < 2) {
+            result.push(prop);
+        }
+    }
+
+    for(let index=0; index < result.length; index++){
+        total += parseInt(result[index]);
+    }
+
+    return total;
 }
 
 module.exports = {

@@ -4,6 +4,10 @@
 
 function past(h, m, s){
     // Your code here!
+    var hToMil = h * 60 * 60 *1000;
+    var mToMil = m * 60 *1000;
+    var sToMil = s * 1000;
+    console.log(hToMil+mToMil+sToMil + " Milliseconds");
 }
 
 module.exports = {

@@ -21,6 +21,18 @@
 
 function mexicanWave(str){
     // Your code here!
+    let finalArray = [];
+    let arr = [];
+
+    for ( let i = 0; i < str.length; i++) {
+        arr = str.split('');
+        if ( arr[i] === ' ') { // in case the element is an empty string we just skip that element and we are goig to the next one
+            continue;
+        }
+        arr[i] = arr[i].toUpperCase();
+        finalArray.push(arr.join(''));
+    }
+    return finalArray;
 }
 
 module.exports = {
